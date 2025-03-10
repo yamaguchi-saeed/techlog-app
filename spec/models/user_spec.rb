@@ -4,7 +4,7 @@ describe User do
   let(:nickname) { 'テスト太郎' }
   let(:email) { 'test@example.com' }
   let(:password) { '12345678' }
-  let(:user) { User.new(nickname: nickname, email: email, password: password, password_confirmation: password) }
+  let(:user) { User.new(nickname: nickname, email: email, password: password, password_confirmation: password) } # 変数に格納
 
   describe '.first' do
     before do
@@ -22,9 +22,7 @@ describe User do
   describe 'validation' do
 
     describe 'nickname属性' do
-
       describe '文字数制限の検証' do
-        
         context 'nicknameが20文字以下の場合' do
           let(:nickname) { 'あいうえおかきくけこさしすせそたちつてと' } # 20文字
 
